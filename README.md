@@ -48,12 +48,13 @@ These classes must be defined in the `share` module and include serialization me
 
 ## How to Use
 
-1. Start the script:
+1. Start the client:
    ```bash
-   python script.py
+   python client.py
    ```
 
-2. Enter the server URL and enroll with a unique name.
+2. Enter your unique name.
+   - name should not be the same as others online
 3. Choose one of the following actions:
    - **Create a Room**: Set a room ID (0-3) and start a session.
    - **Invite Users**: Invite other users by name.
@@ -72,23 +73,9 @@ These classes must be defined in the `share` module and include serialization me
 - `POST /search/{room}`: Searches for an existing room.
 - `POST /watch/{data.ID}`: Sends and receives video data for real-time sharing.
 
-### Responses
-All endpoints should respond with JSON objects and the appropriate HTTP status codes.
-
-## Notes
-
-1. The server URL should be properly configured in the script.
-2. Ensure that the webcam is functional and accessible.
-3. If a mouse interaction window is closed, the system will stop streaming and exit.
-4. Use the `atexit` handler to cleanly unregister from the server when the program exits.
-
 ## Known Issues
 - Video stream resolution is dependent on the webcam.
 - Limited to room IDs 0-3.
 
-## License
-This project is licensed under the MIT License.
-
----
 
 **Enjoy your collaborative video experience!**
